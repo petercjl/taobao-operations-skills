@@ -1,4 +1,5 @@
 import childProcess from 'node:child_process';
+import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -6,6 +7,7 @@ import { packageRoot } from '../src/registry.mjs';
 import { evaluateSycmContract } from '../src/cli.mjs';
 
 const cli = path.join(packageRoot, 'scripts', 'taobao-operations-skills.mjs');
+const packageVersion = JSON.parse(fs.readFileSync(path.join(packageRoot, 'package.json'), 'utf8')).version;
 
 function run(args) {
   return childProcess.spawnSync(process.execPath, [cli, ...args], { encoding: 'utf8', env: { ...process.env, TAOSKILLS_DISABLE_AUTO_UPDATE: '1', SYCMCLI_DISABLE_AUTO_UPDATE: '1' } });
@@ -14,10 +16,10 @@ function run(args) {
 test('version and named source are machine-readable', () => {
   const version = run(['version']);
   assert.equal(version.status, 0, version.stderr);
-  assert.equal(JSON.parse(version.stdout).version, '0.2.0');
+  assert.equal(JSON.parse(version.stdout).version, packageVersion);
   const versionFlag = run(['--version']);
   assert.equal(versionFlag.status, 0, versionFlag.stderr);
-  assert.equal(JSON.parse(versionFlag.stdout).version, '0.2.0');
+  assert.equal(JSON.parse(versionFlag.stdout).version, packageVersion);
   const source = run(['skill', 'source', '--name', 'dmp-shop-insight', '--json']);
   assert.equal(source.status, 0, source.stderr);
   assert.match(JSON.parse(source.stdout).source, /skills[/\\]dmp-shop-insight$/);
