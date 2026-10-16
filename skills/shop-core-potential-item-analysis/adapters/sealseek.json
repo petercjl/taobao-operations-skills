@@ -1,0 +1,15 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "sealseek",
+  "mappings": [
+    {
+      "capability_id": "shop.item-portfolio.analyze",
+      "status": "implemented",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.shop.items.read"},
+      "features": ["dependency-resolution", "full-item-collection", "completeness-gate", "within-shop-quantiles", "deterministic-classification", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store data", "private temporary files"],
+      "normalization": "Use the shared managed-browser collection and bundled deterministic analyzer. Live SealSeek validation remains pending."
+    }
+  ]
+}

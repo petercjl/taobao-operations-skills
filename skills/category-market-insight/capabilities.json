@@ -1,0 +1,68 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "category-market-insight",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    },
+    {
+      "name": "taobao-operations-skills",
+      "package": "@petercjl/taobao-operations-skills",
+      "minimum_version": "0.2.0",
+      "resolution": "exact Skill name from installed suite manifest",
+      "required_capabilities": [
+        "nested-skill-resolution"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "category.market-insight.orchestrate",
+      "purpose": "Orchestrate independent category ranking, keyword, price-band, item-profile, shop-profile, and market-structure Skills into one traceable insight.",
+      "required": true,
+      "required_features": [
+        "exact-skill-resolution",
+        "shared-run-context",
+        "identity-consistency",
+        "partial-delivery",
+        "evidence-lineage",
+        "format-on-request"
+      ],
+      "input_fields": [
+        "store",
+        "category",
+        "dateRange",
+        "topN",
+        "rankType",
+        "focus"
+      ],
+      "output_fields": [
+        "sourceStatus",
+        "marketStructure",
+        "itemProfile",
+        "shopProfile",
+        "keywordOpportunities",
+        "priceOpportunities",
+        "actions",
+        "artifacts",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "comprehensive-product-data-analysis",
+  "target_platforms": ["codex", "sealseek"],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": ["sycm.item.detail.read"]
+    },
+    {
+      "name": "item-traffic-analysis",
+      "minimum_version": "3.0.0",
+      "resolution": "exact Skill name in the same application package or host Skill catalog",
+      "required_capabilities": ["item.traffic-source.analyze"]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "item.comprehensive-diagnosis.analyze",
+      "purpose": "Combine one item's overview, platform diagnosis, detail funnel, and root traffic-source evidence into a traceable business diagnosis.",
+      "required": true,
+      "required_features": ["dependency-resolution", "store-and-item-binding", "same-period-validation", "null-preservation", "funnel-analysis", "traffic-analysis-composition", "evidence-linked-actions"],
+      "input_fields": ["store", "itemId", "dateType", "dateRange", "focus", "limit"],
+      "output_fields": ["store", "itemId", "dateRange", "coreMetrics", "platformDiagnosis", "funnelStages", "traffic", "strengths", "risks", "actions", "dataGaps"],
+      "side_effects": {"external_mutation": false, "may_cost_money": false, "authorization": "read-only-selected-store"}
+    }
+  ]
+}

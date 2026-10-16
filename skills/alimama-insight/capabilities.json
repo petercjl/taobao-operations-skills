@@ -1,0 +1,56 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "alimama-insight",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "alimama.insight.analyze",
+      "purpose": "Query and interpret registered Alimama industry, competition, traffic-keyword, and trend-topic insight modules.",
+      "required": true,
+      "required_features": [
+        "dependency-resolution",
+        "registered-operation-only",
+        "store-binding",
+        "authorization-recovery",
+        "scope-validation",
+        "index-preservation",
+        "evidence-linked-actions"
+      ],
+      "input_fields": [
+        "store",
+        "module",
+        "category",
+        "dateRange",
+        "topicId"
+      ],
+      "output_fields": [
+        "scope",
+        "rankings",
+        "signals",
+        "opportunities",
+        "actions",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

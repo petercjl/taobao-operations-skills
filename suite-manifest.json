@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "suite": "taobao-operations-skills",
+  "nodes": [
+    {
+      "id": "alimama-insight",
+      "skill": "alimama-insight",
+      "group": "promotion",
+      "requires_skills": []
+    },
+    {
+      "id": "category-best-selling-items-analysis",
+      "skill": "category-best-selling-items-analysis",
+      "group": "market",
+      "requires_skills": []
+    },
+    {
+      "id": "category-keyword-analysis",
+      "skill": "category-keyword-analysis",
+      "group": "market",
+      "requires_skills": []
+    },
+    {
+      "id": "category-market-analysis",
+      "skill": "category-market-analysis",
+      "group": "market",
+      "requires_skills": []
+    },
+    {
+      "id": "category-market-insight",
+      "skill": "category-market-insight",
+      "group": "market",
+      "requires_skills": [
+        "category-best-selling-items-analysis",
+        "category-keyword-analysis",
+        "category-price-band-analysis",
+        "category-top-items-profile",
+        "category-top-shops-profile",
+        "category-market-analysis"
+      ]
+    },
+    {
+      "id": "category-price-band-analysis",
+      "skill": "category-price-band-analysis",
+      "group": "market",
+      "requires_skills": []
+    },
+    {
+      "id": "category-top-items-profile",
+      "skill": "category-top-items-profile",
+      "group": "market",
+      "requires_skills": ["category-best-selling-items-analysis"]
+    },
+    {
+      "id": "category-top-shops-profile",
+      "skill": "category-top-shops-profile",
+      "group": "market",
+      "requires_skills": ["category-best-selling-items-analysis"]
+    },
+    {
+      "id": "competitor-comparison-action-tracking",
+      "skill": "competitor-comparison-action-tracking",
+      "group": "competitor",
+      "requires_skills": ["competitor-shop-analysis", "sycm-item-competitor-analysis"]
+    },
+    {
+      "id": "competitor-shop-analysis",
+      "skill": "competitor-shop-analysis",
+      "group": "competitor",
+      "requires_skills": []
+    },
+    {
+      "id": "comprehensive-product-data-analysis",
+      "skill": "comprehensive-product-data-analysis",
+      "group": "item",
+      "requires_skills": ["item-traffic-analysis"]
+    },
+    {
+      "id": "daily-shop-inspection",
+      "skill": "daily-shop-inspection",
+      "group": "shop",
+      "requires_skills": ["shop-core-index-analysis", "shop-core-potential-item-analysis"]
+    },
+    {
+      "id": "dmp-shop-insight",
+      "skill": "dmp-shop-insight",
+      "group": "dmp",
+      "requires_skills": []
+    },
+    {
+      "id": "item-gallery-analysis",
+      "skill": "item-gallery-analysis",
+      "group": "item",
+      "requires_skills": []
+    },
+    {
+      "id": "item-ops-event-impact-analysis",
+      "skill": "item-ops-event-impact-analysis",
+      "group": "item",
+      "requires_skills": ["comprehensive-product-data-analysis"]
+    },
+    {
+      "id": "item-promotion-analysis",
+      "skill": "item-promotion-analysis",
+      "group": "promotion",
+      "requires_skills": []
+    },
+    {
+      "id": "item-traffic-analysis",
+      "skill": "item-traffic-analysis",
+      "group": "item",
+      "requires_skills": []
+    },
+    {
+      "id": "item-traffic-fluctuation-analysis",
+      "skill": "item-traffic-fluctuation-analysis",
+      "group": "item",
+      "requires_skills": ["item-traffic-analysis"]
+    },
+    {
+      "id": "market-blue-ocean-opportunity-mining",
+      "skill": "market-blue-ocean-opportunity-mining",
+      "group": "market",
+      "requires_skills": ["category-best-selling-items-analysis", "category-keyword-analysis", "category-price-band-analysis"]
+    },
+    {
+      "id": "marketing-price-check-pro",
+      "skill": "marketing-price-check-pro",
+      "group": "promotion",
+      "requires_skills": []
+    },
+    {
+      "id": "mkt-insight-marketing-knowledge",
+      "skill": "mkt-insight-marketing-knowledge",
+      "group": "promotion",
+      "requires_skills": []
+    },
+    {
+      "id": "shop-core-index-analysis",
+      "skill": "shop-core-index-analysis",
+      "group": "shop",
+      "requires_skills": []
+    },
+    {
+      "id": "shop-core-potential-item-analysis",
+      "skill": "shop-core-potential-item-analysis",
+      "group": "shop",
+      "requires_skills": []
+    },
+    {
+      "id": "sycm-item-competitor-analysis",
+      "skill": "sycm-item-competitor-analysis",
+      "group": "competitor",
+      "requires_skills": []
+    },
+    {
+      "id": "sycm-item-rank-helper",
+      "skill": "sycm-item-rank-helper",
+      "group": "item",
+      "requires_skills": []
+    },
+    {
+      "id": "weekly-or-monthly-store-performance-reports",
+      "skill": "weekly-or-monthly-store-performance-reports",
+      "group": "shop",
+      "requires_skills": []
+    }
+  ]
+}

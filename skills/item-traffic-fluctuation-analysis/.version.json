@@ -1,0 +1,10 @@
+{
+  "skillId": 361,
+  "skillCode": "item-traffic-fluctuation-analysis",
+  "skillName": "商品流量波动分析",
+  "skillDescription": "分析商品总流量波动，定位到这流量波动的核心渠道并进行具体渠道诊断。使用时必须提供具体的商品ID和明确的分析时间周期。",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738210357
+}

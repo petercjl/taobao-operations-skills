@@ -1,0 +1,15 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "sealseek",
+  "mappings": [
+    {
+      "capability_id": "shop.period-performance.report",
+      "status": "implemented",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.shop.performance.read"},
+      "features": ["dependency-resolution", "explicit-period", "null-preservation", "platform-comparisons", "deterministic-report", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store data", "private temporary files"],
+      "normalization": "Uses the same package-owned Skill and sycmcli contract; runtime execution in SealSeek remains to be forward-tested."
+    }
+  ]
+}

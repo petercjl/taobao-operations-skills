@@ -1,0 +1,30 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "sealseek",
+  "mappings": [
+    {
+      "capability_id": "category.market-structure.analyze",
+      "status": "implemented",
+      "implementation": {
+        "kind": "portable-skill-workflow",
+        "runtime": "sycmcli and exact nested Skills as declared"
+      },
+      "features": [
+        "input-signature-validation",
+        "guarded-write",
+        "recoverable-backup",
+        "locked-field-preservation",
+        "degraded-mode",
+        "kano-finalization",
+        "completion-stamp"
+      ],
+      "permissions": [
+        "execute installed package CLIs",
+        "read explicitly selected authorized data",
+        "write only declared local artifacts with backup"
+      ],
+      "normalization": "Preserve identity, period, null/range semantics, completeness, evidence lineage, and explicit authorization boundaries."
+    }
+  ]
+}

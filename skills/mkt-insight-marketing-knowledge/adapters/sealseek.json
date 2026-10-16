@@ -1,0 +1,29 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "sealseek",
+  "mappings": [
+    {
+      "capability_id": "marketing.knowledge.answer",
+      "status": "implemented",
+      "implementation": {
+        "kind": "portable-skill-workflow",
+        "runtime": "sycmcli and exact nested Skills as declared"
+      },
+      "features": [
+        "authorized-source-only",
+        "freshness-check",
+        "source-traceability",
+        "conflict-preservation",
+        "empty-result-honesty",
+        "no-model-knowledge-fill"
+      ],
+      "permissions": [
+        "execute installed package CLIs",
+        "read explicitly selected authorized data",
+        "write only declared local artifacts with backup"
+      ],
+      "normalization": "Preserve identity, period, null/range semantics, completeness, evidence lineage, and explicit authorization boundaries."
+    }
+  ]
+}

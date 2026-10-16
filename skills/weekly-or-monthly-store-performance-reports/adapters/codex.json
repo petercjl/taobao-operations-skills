@@ -1,0 +1,17 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "shop.period-performance.report",
+      "status": "tested",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.shop.performance.read"},
+      "features": ["dependency-resolution", "explicit-period", "null-preservation", "platform-comparisons", "deterministic-report", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store data", "private temporary files"],
+      "normalization": "Read normalized shop summary data, render a deterministic report, preserve missing values, and remove temporary business data after use.",
+      "tested_date": "2026-10-14",
+      "evidence": ["A clean Codex regression generated a real seven-day store-bound report with store identity, platform comparison metrics, evidence-linked actions, and verified temporary-data cleanup."]
+    }
+  ]
+}

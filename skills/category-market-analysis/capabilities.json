@@ -1,0 +1,64 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "category-market-analysis",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    },
+    {
+      "name": "taobao-operations-skills",
+      "package": "@petercjl/taobao-operations-skills",
+      "minimum_version": "0.2.0",
+      "resolution": "exact Skill name from installed suite manifest",
+      "required_capabilities": [
+        "nested-skill-resolution"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "category.market-structure.analyze",
+      "purpose": "Compute traceable category concentration, price structure, selling-point distribution, KANO layers, and representative items from validated inputs.",
+      "required": true,
+      "required_features": [
+        "input-signature-validation",
+        "guarded-write",
+        "recoverable-backup",
+        "locked-field-preservation",
+        "degraded-mode",
+        "kano-finalization",
+        "completion-stamp"
+      ],
+      "input_fields": [
+        "work_dir",
+        "topItems",
+        "sellingPointStrategy",
+        "priceSegments",
+        "kanoConfig"
+      ],
+      "output_fields": [
+        "marketShare",
+        "representativeItems",
+        "validation",
+        "warnings",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

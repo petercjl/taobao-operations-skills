@@ -1,0 +1,11 @@
+{
+  "name": "item-promotion-analysis",
+  "version": "2.1.0",
+  "description": "商品付费推广分析技能。当用户希望分析商品的付费推广效果、查看推广数据、评估推广ROI、对比推广表现时触发。",
+  "publishConfig": {
+    "registry": "https://contextlab.alibaba-inc.com/skill"
+  },
+  "aoneKit": {
+    "generated": true
+  }
+}

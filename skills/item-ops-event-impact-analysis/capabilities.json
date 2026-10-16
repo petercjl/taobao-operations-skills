@@ -1,0 +1,72 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "item-ops-event-impact-analysis",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    },
+    {
+      "name": "taobao-operations-skills",
+      "package": "@petercjl/taobao-operations-skills",
+      "minimum_version": "0.2.0",
+      "resolution": "exact Skill name from installed suite manifest",
+      "required_capabilities": [
+        "nested-skill-resolution"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "item.event-impact.analyze",
+      "purpose": "Assess before-and-after item changes around a declared operations event with aligned windows and explicit confounders.",
+      "required": true,
+      "required_features": [
+        "nested-skill-resolution",
+        "equal-window-construction",
+        "event-day-isolation",
+        "control-difference",
+        "confounder-register",
+        "causality-boundary",
+        "null-preservation"
+      ],
+      "input_fields": [
+        "store",
+        "itemId",
+        "eventType",
+        "eventAt",
+        "change",
+        "windowDays",
+        "controlItemId",
+        "excludeDates"
+      ],
+      "output_fields": [
+        "preWindow",
+        "postWindow",
+        "metricChanges",
+        "channelChanges",
+        "controlComparison",
+        "confounders",
+        "impactAssessment",
+        "confidence",
+        "actions",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

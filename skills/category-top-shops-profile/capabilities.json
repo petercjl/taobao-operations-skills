@@ -1,0 +1,67 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "category-top-shops-profile",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    },
+    {
+      "name": "taobao-operations-skills",
+      "package": "@petercjl/taobao-operations-skills",
+      "minimum_version": "0.2.0",
+      "resolution": "exact Skill name from installed suite manifest",
+      "required_capabilities": [
+        "nested-skill-resolution"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "category.top-shops.profile",
+      "purpose": "Profile shop concentration, repeated ranking presence, movement, and item patterns from a validated category ranking.",
+      "required": true,
+      "required_features": [
+        "nested-skill-resolution",
+        "ranking-completeness",
+        "exact-shop-aggregation",
+        "comparison-alignment",
+        "sample-share-labeling",
+        "null-preservation"
+      ],
+      "input_fields": [
+        "store",
+        "cateId",
+        "dateRange",
+        "rankType",
+        "topN",
+        "comparisonRanking"
+      ],
+      "output_fields": [
+        "completeness",
+        "topShops",
+        "concentration",
+        "movement",
+        "shopPatterns",
+        "sampleItems",
+        "actions",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

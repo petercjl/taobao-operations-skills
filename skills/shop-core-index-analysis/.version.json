@@ -1,0 +1,10 @@
+{
+  "skillId": 143,
+  "skillCode": "shop-core-index-analysis",
+  "skillName": "店铺核心数据查询",
+  "skillDescription": "分析本店指定周期的核心数据",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738204151
+}

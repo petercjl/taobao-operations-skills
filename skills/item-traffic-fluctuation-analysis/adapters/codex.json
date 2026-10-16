@@ -1,0 +1,30 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "item.traffic-fluctuation.analyze",
+      "status": "implemented",
+      "implementation": {
+        "kind": "portable-skill-workflow",
+        "runtime": "sycmcli and exact nested Skills as declared"
+      },
+      "features": [
+        "nested-skill-resolution",
+        "period-alignment",
+        "root-channel-only",
+        "small-sample-gate",
+        "mixed-signal-classification",
+        "comparison-semantics",
+        "null-preservation"
+      ],
+      "permissions": [
+        "execute installed package CLIs",
+        "read explicitly selected authorized data",
+        "write only declared local artifacts with backup"
+      ],
+      "normalization": "Preserve identity, period, null/range semantics, completeness, evidence lineage, and explicit authorization boundaries."
+    }
+  ]
+}

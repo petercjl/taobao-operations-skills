@@ -1,0 +1,16 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "category-price-band-analysis",
+  "target_platforms": ["codex", "sealseek"],
+  "dependencies": [{"name": "sycmcli", "package": "@petercjl/sycmcli", "minimum_version": "0.4.0", "resolution": "advertised skill catalog or sycmcli skill source --json", "required_capabilities": ["sycm.category.read", "sycm.market.price_segments.read", "sycm.market.item_rank.read"]}],
+  "capabilities": [{
+    "id": "market.category-price-bands.analyze",
+    "purpose": "Analyze platform-defined price bands and traceable Top-item samples for each band in one selected leaf category.",
+    "required": true,
+    "required_features": ["dependency-resolution", "leaf-category-resolution", "platform-price-band-read", "price-filter-traceability", "per-band-sampling", "range-preservation", "null-preservation", "evidence-linked-actions"],
+    "input_fields": ["store", "categoryId", "categoryName", "dateType", "dateRange", "samplePerBand"],
+    "output_fields": ["store", "categoryId", "dateRange", "samplePerBand", "bands", "actions", "dataGaps"],
+    "side_effects": {"external_mutation": false, "may_cost_money": false, "authorization": "read-only-selected-store-market-session"}
+  }]
+}

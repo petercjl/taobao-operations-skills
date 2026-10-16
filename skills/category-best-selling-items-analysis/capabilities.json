@@ -1,0 +1,16 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "category-best-selling-items-analysis",
+  "target_platforms": ["codex", "sealseek"],
+  "dependencies": [{"name": "sycmcli", "package": "@petercjl/sycmcli", "minimum_version": "0.4.0", "resolution": "advertised skill catalog or sycmcli skill source --json", "required_capabilities": ["sycm.category.read", "sycm.market.item_rank.read"]}],
+  "capabilities": [{
+    "id": "market.category-best-selling-items.analyze",
+    "purpose": "Analyze a selected leaf category's item ranking, returned performance indicators, platform core keywords, and shop distribution.",
+    "required": true,
+    "required_features": ["dependency-resolution", "leaf-category-resolution", "rank-pagination", "top-n-completeness", "identity-field-omission", "keyword-frequency", "shop-distribution", "null-preservation"],
+    "input_fields": ["store", "categoryId", "categoryName", "dateType", "dateRange", "rankType", "top"],
+    "output_fields": ["store", "categoryId", "dateRange", "rankType", "completeness", "topItems", "keywordFrequency", "shopDistribution", "actions", "dataGaps"],
+    "side_effects": {"external_mutation": false, "may_cost_money": false, "authorization": "read-only-selected-store-market-session"}
+  }]
+}

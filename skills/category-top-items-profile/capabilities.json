@@ -1,0 +1,16 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "category-top-items-profile",
+  "target_platforms": ["codex", "sealseek"],
+  "dependencies": [{"name": "category-best-selling-items-analysis", "package": "@petercjl/taobao-operations-skills", "minimum_version": "3.0.0", "resolution": "advertised skill catalog or taobao-operations-skills skill source category-best-selling-items-analysis --json", "required_capabilities": ["market.category-best-selling-items.analyze"]}],
+  "capabilities": [{
+    "id": "market.category-top-items.profile",
+    "purpose": "Turn a verified category item ranking into a Top-item positioning profile using platform core keywords, recurring shops, and returned rank-comparison evidence.",
+    "required": true,
+    "required_features": ["nested-skill-resolution", "upstream-contract-validation", "sample-completeness-propagation", "platform-keyword-only", "recurring-shop-profile", "null-preservation", "evidence-linked-actions"],
+    "input_fields": ["store", "categoryId", "categoryName", "dateType", "dateRange", "rankType", "top", "profileLimit"],
+    "output_fields": ["status", "store", "categoryId", "dateRange", "rankType", "sample", "topItems", "positioningKeywords", "recurringShops", "rankMovementSummary", "actions", "dataGaps"],
+    "side_effects": {"external_mutation": false, "may_cost_money": false, "authorization": "inherits-read-only-upstream-market-session"}
+  }]
+}

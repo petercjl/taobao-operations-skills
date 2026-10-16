@@ -1,0 +1,10 @@
+{
+  "skillId": 2094,
+  "skillCode": "category-market-analysis",
+  "skillName": "品类市场竞争格局分析",
+  "skillDescription": "基于品类榜单商品数据与类目权威卖点信号，做市场占比（品牌/价格带/卖点）、KANO 分层分析",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738205458
+}

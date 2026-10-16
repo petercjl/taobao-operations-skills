@@ -1,0 +1,15 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "sealseek",
+  "mappings": [
+    {
+      "capability_id": "item.comprehensive-diagnosis.analyze",
+      "status": "implemented",
+      "implementation": {"kind": "composed-skill", "dependencies": ["sycmcli", "item-traffic-analysis"]},
+      "features": ["dependency-resolution", "store-and-item-binding", "same-period-validation", "null-preservation", "funnel-analysis", "traffic-analysis-composition", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store and item data", "execute bundled deterministic analyzers", "private temporary files"],
+      "normalization": "Use the same package-owned scripts and capability contracts as Codex; runtime validation remains required on SealSeek."
+    }
+  ]
+}

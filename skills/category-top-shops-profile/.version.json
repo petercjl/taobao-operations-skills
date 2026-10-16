@@ -1,0 +1,10 @@
+{
+  "skillId": 156,
+  "skillCode": "category-top-shops-profile",
+  "skillName": "类目店铺榜特征分析",
+  "skillDescription": "分析指定类目TOP100的交易总量和交易增速的店铺类型特征，获得该类目里增长与落榜的店铺",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738204318
+}

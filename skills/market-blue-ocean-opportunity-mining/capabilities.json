@@ -1,0 +1,65 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "market-blue-ocean-opportunity-mining",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    },
+    {
+      "name": "taobao-operations-skills",
+      "package": "@petercjl/taobao-operations-skills",
+      "minimum_version": "0.2.0",
+      "resolution": "exact Skill name from installed suite manifest",
+      "required_capabilities": [
+        "nested-skill-resolution"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "market.blue-ocean.mine",
+      "purpose": "Rank evidence-backed category, keyword, and price-band opportunity candidates for further validation.",
+      "required": true,
+      "required_features": [
+        "multi-skill-composition",
+        "cross-category-alignment",
+        "percentile-normalization",
+        "missing-signal-coverage",
+        "evidence-counterevidence",
+        "validation-gates",
+        "no-profit-invention"
+      ],
+      "input_fields": [
+        "store",
+        "categories",
+        "dateRange",
+        "candidateLimit",
+        "costConstraints",
+        "marginConstraints",
+        "supplyConstraints"
+      ],
+      "output_fields": [
+        "methodology",
+        "candidates",
+        "validationPlan",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

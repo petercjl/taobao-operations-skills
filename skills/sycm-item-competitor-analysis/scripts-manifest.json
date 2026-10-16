@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "runId": "2026-08-12T12-24-51",
+  "domain": "sycm.taobao.com",
+  "scripts": [
+    {
+      "apiId": "get-core-indexes",
+      "name": "get-core-indexes",
+      "path": "scripts/get-core-indexes.js",
+      "args": {},
+      "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow"
+    },
+    {
+      "apiId": "search-rival-item",
+      "name": "search-rival-item",
+      "path": "scripts/search-rival-item.js",
+      "args": {},
+      "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow"
+    },
+    {
+      "apiId": "recommend-rival-item",
+      "name": "recommend-rival-item",
+      "path": "scripts/recommend-rival-item.js",
+      "args": {},
+      "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow"
+    },
+    {
+      "apiId": "get-core-trend",
+      "name": "get-core-trend",
+      "path": "scripts/get-core-trend.js",
+      "args": {},
+      "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow"
+    },
+    {
+      "apiId": "get-flowsource-qzt",
+      "name": "get-flowsource-qzt",
+      "path": "scripts/get-flowsource-qzt.js",
+      "args": {},
+      "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow"
+    },
+    {
+      "apiId": "get-flowsource-v4",
+      "name": "get-flowsource-v4",
+      "path": "scripts/get-flowsource-v4.js",
+      "args": {},
+      "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow"
+    },
+    {
+      "apiId": "get-flowsource-origin",
+      "name": "get-flowsource-origin",
+      "path": "scripts/get-flowsource-origin.js",
+      "args": {},
+      "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow"
+    },
+    {
+      "apiId": "get-search-words",
+      "name": "get-search-words",
+      "path": "scripts/get-search-words.js",
+      "args": {},
+      "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "skillId": 833,
+  "skillCode": "marketing-price-check-pro",
+  "skillName": "商品价格核验（进阶版）",
+  "skillDescription": "帮助淘宝商家查询线上标价、普惠券后价、一件预估价、预估最低到手价等价格，核实本地价格与线上价格的差异",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738207469
+}

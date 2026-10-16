@@ -1,0 +1,30 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "dmp.shop-insight.analyze",
+      "status": "implemented",
+      "implementation": {
+        "kind": "portable-skill-workflow",
+        "runtime": "sycmcli and exact nested Skills as declared"
+      },
+      "features": [
+        "registered-operation-only",
+        "store-binding",
+        "authorization-recovery",
+        "date-range-validation",
+        "pagination-completeness",
+        "benchmark-alignment",
+        "credential-nonexport"
+      ],
+      "permissions": [
+        "execute installed package CLIs",
+        "read explicitly selected authorized data",
+        "write only declared local artifacts with backup"
+      ],
+      "normalization": "Preserve identity, period, null/range semantics, completeness, evidence lineage, and explicit authorization boundaries."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "sealseek",
+  "mappings": [
+    {
+      "capability_id": "item.traffic-source.analyze",
+      "status": "implemented",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.item.detail.read"},
+      "features": ["dependency-resolution", "store-and-item-binding", "explicit-ranking-selection", "traffic-source-tree", "root-only-aggregation", "overview-reconciliation", "mixed-signal-classification", "sample-size-gate", "null-preservation", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store and item data", "private temporary files"],
+      "normalization": "Uses the same package-owned Skill, overview reconciliation, mixed-signal classification, and sycmcli contract; live SealSeek validation remains pending."
+    }
+  ]
+}

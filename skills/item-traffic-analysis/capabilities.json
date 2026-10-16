@@ -1,0 +1,26 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "item-traffic-analysis",
+  "target_platforms": ["codex", "sealseek"],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": ["sycm.item.detail.read"]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "item.traffic-source.analyze",
+      "purpose": "Analyze one shop item's root traffic-source contribution, conversion efficiency, and platform comparison signals without double-counting child channels.",
+      "required": true,
+      "required_features": ["dependency-resolution", "store-and-item-binding", "explicit-ranking-selection", "traffic-source-tree", "root-only-aggregation", "overview-reconciliation", "mixed-signal-classification", "sample-size-gate", "null-preservation", "evidence-linked-actions"],
+      "input_fields": ["store", "itemId", "dateType", "dateRange", "focus", "limit"],
+      "output_fields": ["store", "itemId", "dateRange", "treeTotals", "itemTotals", "reconciliation", "rootSources", "topTraffic", "topSales", "highConversion", "growing", "declining", "mixed", "actions", "dataGaps"],
+      "side_effects": {"external_mutation": false, "may_cost_money": false, "authorization": "read-only-selected-store"}
+    }
+  ]
+}

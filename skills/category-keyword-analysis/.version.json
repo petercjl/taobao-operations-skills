@@ -1,0 +1,10 @@
+{
+  "skillId": 159,
+  "skillCode": "category-keyword-analysis",
+  "skillName": "类目关键词分析",
+  "skillDescription": "分析指定叶子类目的关键词排行、指标区间和变化，为标题研究、竞品搜索和机会验证提供证据",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "package",
+  "installedAt": 1790738204542
+}

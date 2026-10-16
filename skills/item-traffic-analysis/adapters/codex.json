@@ -1,0 +1,17 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "item.traffic-source.analyze",
+      "status": "tested",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.item.detail.read"},
+      "features": ["dependency-resolution", "store-and-item-binding", "explicit-ranking-selection", "traffic-source-tree", "root-only-aggregation", "overview-reconciliation", "mixed-signal-classification", "sample-size-gate", "null-preservation", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store and item data", "private temporary files"],
+      "normalization": "Analyze root-channel tree distribution, reconcile it to item overview totals before claiming overall contribution, separate mixed growth/decline signals, preserve missing values, and remove temporary business data after use.",
+      "tested_date": "2026-10-14",
+      "evidence": ["Codex clean-context regression used packaged sycmcli 0.4.0 against a bound managed store, selected the highest-sales-volume item from all 402 items, reconciled flow and overview totals, suppressed unreconciled overall contribution rates, and cleaned temporary data."]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "skillId": 339,
+  "skillCode": "item-gallery-analysis",
+  "skillName": "商品主图分析",
+  "skillDescription": "分析商品的主图图集、视频的表现，并对比流失竞品，诊断归因。需要传入商品 id",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738209078
+}

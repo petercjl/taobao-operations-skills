@@ -1,0 +1,10 @@
+{
+  "skillId": 172,
+  "skillCode": "category-best-selling-items-analysis",
+  "skillName": "类目热销产品及特征分析",
+  "skillDescription": "分析指定类目的热销商品和趋势，为商家选品、测款和追爆款提供数据支持",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738204910
+}

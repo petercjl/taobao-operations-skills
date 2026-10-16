@@ -1,0 +1,49 @@
+{
+  "name": "@petercjl/taobao-operations-skills",
+  "version": "0.2.0",
+  "description": "Independent Taobao operations application Skills distributed as one cross-Agent npm package",
+  "type": "module",
+  "bin": {
+    "taobao-operations-skills": "scripts/taobao-operations-skills.mjs"
+  },
+  "exports": "./src/index.mjs",
+  "files": [
+    "scripts",
+    "src",
+    "skills",
+    "capabilities.json",
+    "suite-manifest.json",
+    "skills-manifest.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check scripts/taobao-operations-skills.mjs && node --check src/*.mjs",
+    "test": "node --test",
+    "prepack": "npm run check && npm test",
+    "version": "node scripts/sync-package-version.mjs"
+  },
+  "keywords": [
+    "taobao",
+    "tmall",
+    "ecommerce",
+    "agent-skill",
+    "sycm"
+  ],
+  "author": "Peter Chen",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petercjl/taobao-operations-skills.git"
+  },
+  "homepage": "https://github.com/petercjl/taobao-operations-skills#readme",
+  "bugs": {
+    "url": "https://github.com/petercjl/taobao-operations-skills/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

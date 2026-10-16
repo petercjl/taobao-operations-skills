@@ -1,0 +1,17 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "item.gallery-performance.analyze",
+      "status": "tested",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.item.gallery.read"},
+      "features": ["dependency-resolution", "store-and-item-binding", "complete-pagination", "material-type-grouping", "sample-size-gate", "null-preservation", "non-additive-metric-warning", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store and item material data", "private temporary files"],
+      "normalization": "Preserve platform metric values and comparisons, gate conversion rankings by exposure sample, and avoid visual-content claims without pixel evidence.",
+      "tested_date": "2026-10-14",
+      "evidence": ["Codex clean-context regression used packaged sycmcli 0.4.0 to select the unique highest-sales-volume item from all 402 items, read all six image/video materials, enforce an exposure sample gate, avoid additive visitor totals and visual-content speculation, and clean temporary data."]
+    }
+  ]
+}

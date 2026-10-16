@@ -1,0 +1,10 @@
+{
+  "skillId": 1991,
+  "skillCode": "dmp-shop-insight",
+  "skillName": "达摩盘全店洞察",
+  "skillDescription": "查询达摩盘全店洞察的支付金额、搜索点击、转化率、ROI 等商品指标与同行同层基准。",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738207867
+}

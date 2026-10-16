@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "generator": "api-anything-workflow",
+  "workflowVersion": "1.2.0",
+  "cliVersion": "0.2.0",
+  "domain": "sycm.taobao.com",
+  "sourceRunId": "2026-08-12T12-24-51",
+  "generatedAt": "2026-08-12T13:21:00.000Z",
+  "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow",
+  "scripts": [
+    {"name": "get-core-indexes.js", "reference": "get-core-indexes.md", "verificationStatus": "passed"},
+    {"name": "search-rival-item.js", "reference": "search-rival-item.md", "verificationStatus": "passed"},
+    {"name": "recommend-rival-item.js", "reference": "recommend-rival-item.md", "verificationStatus": "passed"},
+    {"name": "get-core-trend.js", "reference": "get-core-trend.md", "verificationStatus": "passed"},
+    {"name": "get-flowsource-qzt.js", "reference": "get-flowsource-qzt.md", "verificationStatus": "passed"},
+    {"name": "get-flowsource-v4.js", "reference": "get-flowsource-v4.md", "verificationStatus": "passed"},
+    {"name": "get-flowsource-origin.js", "reference": "get-flowsource-origin.md", "verificationStatus": "passed"},
+    {"name": "get-search-words.js", "reference": "get-search-words.md", "verificationStatus": "passed"}
+  ],
+  "verification": "verification.json",
+  "playbookSync": "playbook-sync.json"
+}

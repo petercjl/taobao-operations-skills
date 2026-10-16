@@ -1,0 +1,10 @@
+{
+  "skillId": 260,
+  "skillCode": "daily-shop-inspection",
+  "skillName": "店铺每日巡检(基础版)",
+  "skillDescription": "分析店铺和核心商品昨日异动、追踪竞对运营和流失动态、巡检高危风险项目，提示商家及时处理以避免损失。",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738203219
+}

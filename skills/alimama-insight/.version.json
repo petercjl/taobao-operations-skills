@@ -1,0 +1,10 @@
+{
+  "skillId": 1120,
+  "skillCode": "alimama-insight",
+  "skillName": "万相台（无界）-洞察-数据获取",
+  "skillDescription": "查询万相台无界版关键词洞察数据：行业解析、竞争解析、流量解析、趋势速递",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738209961
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "portable-skill-adapter", "schema_version": "1.0.0", "platform": "codex",
+  "mappings": [{
+    "capability_id": "market.category-best-selling-items.analyze", "status": "tested",
+    "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capabilities": ["sycm.category.read", "sycm.market.item_rank.read"]},
+    "features": ["dependency-resolution", "leaf-category-resolution", "rank-pagination", "top-n-completeness", "identity-field-omission", "keyword-frequency", "shop-distribution", "null-preservation"],
+    "permissions": ["execute installed sycmcli", "read selected authorized market data", "private temporary files"],
+    "normalization": "Use only selected leaf-category ranking rows, omit internal identity identifiers, preserve missing indicators, and label calculated buyer/visitor ratios as derived values.",
+    "tested_date": "2026-10-14",
+    "evidence": ["A clean Codex context completed a real seven-day Top 20 leaf-category ranking with two pages, zero duplicates, no warnings, privacy checks, deterministic analysis, and temporary-data cleanup."]
+  }]
+}

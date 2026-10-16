@@ -1,0 +1,10 @@
+{
+  "skillId": 187,
+  "skillCode": "item-ops-event-impact-analysis",
+  "skillName": "商品运营动作分析",
+  "skillDescription": "分析商品运营事件和对应周期内的数据变化情况",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738207068
+}

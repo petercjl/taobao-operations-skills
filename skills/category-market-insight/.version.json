@@ -1,0 +1,10 @@
+{
+  "skillId": 1401,
+  "skillCode": "category-market-insight",
+  "skillName": "品类市场洞察与竞争格局分析",
+  "skillDescription": "基于生意参谋市场榜单 top100 商品，洞察品类的市场规模、竞争格局、价格带分布、核心卖点机会。",
+  "skillVersion": "v3.1.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738211358
+}

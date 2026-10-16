@@ -1,0 +1,10 @@
+{
+  "skillId": 157,
+  "skillCode": "category-top-items-profile",
+  "skillName": "类目商品榜特征分析",
+  "skillDescription": "基于真实类目排行和平台核心关键词，归纳 Top 商品定位、重复上榜店铺与排行变化",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "package",
+  "installedAt": 1790738204361
+}

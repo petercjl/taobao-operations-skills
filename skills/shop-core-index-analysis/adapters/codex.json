@@ -1,0 +1,17 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "shop.performance.analyze",
+      "status": "tested",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.shop.performance.read"},
+      "features": ["dependency-resolution", "store-selection", "identity-validation", "null-preserving-analysis", "evidence-linked-diagnosis"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store data"],
+      "normalization": "Use sycmcli JSON output, preserve nulls, and produce evidence-linked business interpretation.",
+      "tested_date": "2026-10-14",
+      "evidence": ["Codex completed live seven-day shop summary and payAmt trend reads through the bound managed store profile; application contract and package tests passed locally."]
+    }
+  ]
+}

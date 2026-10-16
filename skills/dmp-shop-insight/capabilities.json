@@ -1,0 +1,61 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "dmp-shop-insight",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "dmp.shop-insight.analyze",
+      "purpose": "Fetch and analyze DMP shop overview, items, categories, labels, indicators, and benchmark comparisons through registered operations.",
+      "required": true,
+      "required_features": [
+        "registered-operation-only",
+        "store-binding",
+        "authorization-recovery",
+        "date-range-validation",
+        "pagination-completeness",
+        "benchmark-alignment",
+        "credential-nonexport"
+      ],
+      "input_fields": [
+        "store",
+        "endDate",
+        "period",
+        "category",
+        "label",
+        "indicators",
+        "topN"
+      ],
+      "output_fields": [
+        "overview",
+        "items",
+        "categories",
+        "labels",
+        "benchmarkComparisons",
+        "itemSegments",
+        "actions",
+        "completeness",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

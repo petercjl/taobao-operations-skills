@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "runId": "2026-08-12T12-24-51",
+  "domain": "sycm.taobao.com",
+  "verifiedAt": "2026-08-12T13:20:32.213Z",
+  "scene": "https://sycm.taobao.com/mc/free/ci_item?activeKey=itemCompare&dateRange=2026-07-07%7C2026-08-05&dateType=recent30&selfItem=692941946548&rivalItem1=861895294478&rivalItem2=&ciShop=flow",
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "blocked": 0
+  },
+  "results": [
+    {
+      "apiId": "get-core-indexes",
+      "status": "passed",
+      "durationMs": 326,
+      "evidence": "Script executed successfully in the target browser context."
+    },
+    {
+      "apiId": "search-rival-item",
+      "status": "passed",
+      "durationMs": 575,
+      "evidence": "Script executed successfully in the target browser context."
+    },
+    {
+      "apiId": "recommend-rival-item",
+      "status": "passed",
+      "durationMs": 159,
+      "evidence": "Script executed successfully in the target browser context."
+    },
+    {
+      "apiId": "get-core-trend",
+      "status": "passed",
+      "durationMs": 351,
+      "evidence": "Script executed successfully in the target browser context."
+    },
+    {
+      "apiId": "get-flowsource-qzt",
+      "status": "passed",
+      "durationMs": 104,
+      "evidence": "Script executed successfully in the target browser context."
+    },
+    {
+      "apiId": "get-flowsource-v4",
+      "status": "passed",
+      "durationMs": 127,
+      "evidence": "Script executed successfully in the target browser context."
+    },
+    {
+      "apiId": "get-flowsource-origin",
+      "status": "passed",
+      "durationMs": 199,
+      "evidence": "Script executed successfully in the target browser context."
+    },
+    {
+      "apiId": "get-search-words",
+      "status": "passed",
+      "durationMs": 134,
+      "evidence": "Script executed successfully in the target browser context."
+    }
+  ]
+}

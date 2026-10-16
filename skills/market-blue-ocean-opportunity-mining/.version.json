@@ -1,0 +1,10 @@
+{
+  "skillId": 218,
+  "skillCode": "market-blue-ocean-opportunity-mining",
+  "skillName": "市场蓝海机会发现",
+  "skillDescription": "挖掘类目的蓝海属性、价格带、关键词、风格趋势、优质店铺和商品，结合专家提出商品开发、关键词运营等建议。",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738209649
+}

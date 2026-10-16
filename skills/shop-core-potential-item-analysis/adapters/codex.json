@@ -1,0 +1,17 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "shop.item-portfolio.analyze",
+      "status": "tested",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.shop.items.read"},
+      "features": ["dependency-resolution", "full-item-collection", "completeness-gate", "within-shop-quantiles", "deterministic-classification", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store data", "private temporary files"],
+      "normalization": "Collect normalized shop items, run the bundled deterministic analyzer, preserve missing values, and remove temporary business data after use.",
+      "tested_date": "2026-10-14",
+      "evidence": ["A clean Codex regression collected all 402 shop items across 21 pages, preserved explicit nulls separately from numeric zeroes, and verified sales-base-first potential-item ordering."]
+    }
+  ]
+}

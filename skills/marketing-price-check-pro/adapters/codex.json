@@ -1,0 +1,31 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "marketing.price-check.batch",
+      "status": "implemented",
+      "implementation": {
+        "kind": "portable-skill-workflow",
+        "runtime": "sycmcli and exact nested Skills as declared"
+      },
+      "features": [
+        "source-file-preservation",
+        "field-mapping-confirmation",
+        "stable-online-read",
+        "sku-alignment",
+        "price-basis-labeling",
+        "guarded-output",
+        "recoverable-backup",
+        "credential-nonexport"
+      ],
+      "permissions": [
+        "execute installed package CLIs",
+        "read explicitly selected authorized data",
+        "write only declared local artifacts with backup"
+      ],
+      "normalization": "Preserve identity, period, null/range semantics, completeness, evidence lineage, and explicit authorization boundaries."
+    }
+  ]
+}

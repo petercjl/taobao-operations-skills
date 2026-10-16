@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "package": "@petercjl/taobao-operations-skills",
+  "packageVersion": "0.2.0",
+  "capabilityContracts": {
+    "sycmcli": {
+      "package": "@petercjl/sycmcli",
+      "minimumVersion": "0.4.0",
+      "requiredCapabilities": ["sycm.shop.performance.read"],
+      "responsibility": "Store-scoped authentication, browser lifecycle, data retrieval, guarded writes, readback, and recovery."
+    }
+  },
+  "platforms": {
+    "codex:macos": { "status": "unresolved", "reason": "Source migration is complete; managed-install and clean-session business smoke are pending." },
+    "sealseek:macos": { "status": "unresolved", "reason": "Source migration is complete; host discovery and business smoke are pending." },
+    "sealseek:windows": { "status": "unresolved", "reason": "Static package support is planned; live Windows verification is pending." }
+  },
+  "skills": [
+    { "name": "alimama-insight", "skillVersion": "3.0.0", "group": "promotion", "entry": "skills/alimama-insight/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["alimama.insight.read"] },
+    { "name": "category-best-selling-items-analysis", "skillVersion": "3.0.0", "group": "market", "entry": "skills/category-best-selling-items-analysis/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.category.read", "sycm.market.item_rank.read"] },
+    { "name": "category-keyword-analysis", "skillVersion": "3.0.0", "group": "market", "entry": "skills/category-keyword-analysis/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.category.read", "sycm.market.keyword_rank.read"] },
+    { "name": "category-market-analysis", "skillVersion": "3.0.0", "group": "market", "entry": "skills/category-market-analysis/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["local.analysis.category-market"] },
+    { "name": "category-market-insight", "skillVersion": "3.1.0", "group": "market", "entry": "skills/category-market-insight/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.category.resolve", "sycm.category.top-items.read", "local.analysis.category-market"] },
+    { "name": "category-price-band-analysis", "skillVersion": "3.0.0", "group": "market", "entry": "skills/category-price-band-analysis/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.category.read", "sycm.market.price_segments.read", "sycm.market.item_rank.read"] },
+    { "name": "category-top-items-profile", "skillVersion": "3.0.0", "group": "market", "entry": "skills/category-top-items-profile/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["market.category-best-selling-items.analyze"] },
+    { "name": "category-top-shops-profile", "skillVersion": "3.0.0", "group": "market", "entry": "skills/category-top-shops-profile/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.category.top-shops.read"] },
+    { "name": "competitor-comparison-action-tracking", "skillVersion": "3.0.0", "group": "competitor", "entry": "skills/competitor-comparison-action-tracking/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.competitor.activity.read"] },
+    { "name": "competitor-shop-analysis", "skillVersion": "3.0.0", "group": "competitor", "entry": "skills/competitor-shop-analysis/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.competitor.shop.read"] },
+    { "name": "comprehensive-product-data-analysis", "skillVersion": "3.0.0", "group": "item", "entry": "skills/comprehensive-product-data-analysis/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.item.detail.read", "item.traffic-source.analyze"] },
+    { "name": "daily-shop-inspection", "skillVersion": "3.0.0", "group": "shop", "entry": "skills/daily-shop-inspection/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.shop.performance.read", "sycm.shop.alerts.read"] },
+    { "name": "dmp-shop-insight", "skillVersion": "3.0.0", "group": "dmp", "entry": "skills/dmp-shop-insight/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["dmp.shop.read"] },
+    { "name": "item-gallery-analysis", "skillVersion": "3.0.0", "group": "item", "entry": "skills/item-gallery-analysis/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.item.gallery.read"] },
+    { "name": "item-ops-event-impact-analysis", "skillVersion": "3.0.0", "group": "item", "entry": "skills/item-ops-event-impact-analysis/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.item.event-impact.read"] },
+    { "name": "item-promotion-analysis", "skillVersion": "3.0.0", "group": "promotion", "entry": "skills/item-promotion-analysis/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["alimama.item.promotion.read"] },
+    { "name": "item-traffic-analysis", "skillVersion": "3.0.0", "group": "item", "entry": "skills/item-traffic-analysis/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.item.detail.read"] },
+    { "name": "item-traffic-fluctuation-analysis", "skillVersion": "3.0.0", "group": "item", "entry": "skills/item-traffic-fluctuation-analysis/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.item.traffic.read"] },
+    { "name": "market-blue-ocean-opportunity-mining", "skillVersion": "3.0.0", "group": "market", "entry": "skills/market-blue-ocean-opportunity-mining/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.market.opportunity.read"] },
+    { "name": "marketing-price-check-pro", "skillVersion": "3.0.0", "group": "promotion", "entry": "skills/marketing-price-check-pro/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["taobao.marketing.price.read"] },
+    { "name": "mkt-insight-marketing-knowledge", "aliases": ["mkt_insight-marketing-knowledge"], "skillVersion": "3.0.0", "group": "promotion", "entry": "skills/mkt-insight-marketing-knowledge/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["local.knowledge.marketing"] },
+    { "name": "shop-core-index-analysis", "skillVersion": "3.0.0", "group": "shop", "entry": "skills/shop-core-index-analysis/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.shop.performance.read"] },
+    { "name": "shop-core-potential-item-analysis", "skillVersion": "3.0.0", "group": "shop", "entry": "skills/shop-core-potential-item-analysis/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.shop.items.read"] },
+    { "name": "sycm-item-competitor-analysis", "skillVersion": "3.0.0", "group": "competitor", "entry": "skills/sycm-item-competitor-analysis/SKILL.md", "migrationStatus": "implemented-awaiting-validation", "capabilities": ["sycm.item.competitor.read"] },
+    { "name": "sycm-item-rank-helper", "skillVersion": "3.0.0", "group": "item", "entry": "skills/sycm-item-rank-helper/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["sycm.item.rank.read"] },
+    { "name": "weekly-or-monthly-store-performance-reports", "skillVersion": "3.0.0", "group": "shop", "entry": "skills/weekly-or-monthly-store-performance-reports/SKILL.md", "migrationStatus": "implemented-local-validation", "capabilities": ["command.execute", "sycm.shop.performance.read"] }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "skillId": 262,
+  "skillCode": "weekly-or-monthly-store-performance-reports",
+  "skillName": "店铺经营周报和月报",
+  "skillDescription": "获取并分析店铺和核心商品上周/月的经营情况，分析竞争格局和流失变化，挖掘市场蓝海机会",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738203329
+}

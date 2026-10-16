@@ -1,0 +1,10 @@
+{
+  "skillId": 328,
+  "skillCode": "competitor-shop-analysis",
+  "skillName": "竞店对比分析",
+  "skillDescription": "全面对比分析本店和竞店的成交转化对比、流量渠道对比、搜索词对比、Top商品对比，以及竞店运营动作跟踪",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738207915
+}

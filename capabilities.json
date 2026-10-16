@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "package": "@petercjl/taobao-operations-skills",
+  "kind": "application-skill-suite",
+  "commands": [
+    "version",
+    "capabilities --json",
+    "doctor --json",
+    "skill list --json",
+    "skill source --name <skill> --json",
+    "skill status [--name <skill>] [--agent <agent>] --json",
+    "skill install --name <skill>|--all --agent <agent> [--adopt] --json",
+    "skill update --name <skill>|--all --agent <agent> [--reconcile] --json",
+    "update status|check|install --json"
+  ],
+  "agents": ["codex", "agents", "sealseek"],
+  "responsibility": {
+    "owns": ["business methods", "workflow", "analysis decisions", "project state", "business acceptance"],
+    "delegates": ["authentication", "browser lifecycle", "data retrieval", "guarded writes", "readback", "recovery"]
+  }
+}

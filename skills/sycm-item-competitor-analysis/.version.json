@@ -1,0 +1,10 @@
+{
+  "skillId": 1993,
+  "skillCode": "sycm-item-competitor-analysis",
+  "skillName": "生意参谋商品竞品对比",
+  "skillDescription": "查询生意参谋商品竞品对比的本品/竞品核心指标、流量来源、支付转化率与搜索词。",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738208057
+}

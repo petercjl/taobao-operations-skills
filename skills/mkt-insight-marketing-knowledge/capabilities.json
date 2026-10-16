@@ -1,0 +1,55 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "mkt-insight-marketing-knowledge",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "marketing.knowledge.answer",
+      "purpose": "Answer marketing and pricing-rule questions from authorized knowledge sources with source and freshness traceability.",
+      "required": true,
+      "required_features": [
+        "authorized-source-only",
+        "freshness-check",
+        "source-traceability",
+        "conflict-preservation",
+        "empty-result-honesty",
+        "no-model-knowledge-fill"
+      ],
+      "input_fields": [
+        "question",
+        "platform",
+        "scenario",
+        "ruleDate",
+        "sources"
+      ],
+      "output_fields": [
+        "answer",
+        "conditions",
+        "exceptions",
+        "sources",
+        "conflicts",
+        "unanswered"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "authorized-knowledge-read"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "portable-skill-adapter", "schema_version": "1.0.0", "platform": "codex",
+  "mappings": [{
+    "capability_id": "market.category-keywords.analyze", "status": "tested",
+    "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capabilities": ["sycm.category.read", "sycm.market.keyword_rank.read"]},
+    "features": ["dependency-resolution", "leaf-category-resolution", "keyword-pagination", "top-n-completeness", "range-preservation", "null-preservation", "evidence-linked-actions"],
+    "permissions": ["execute installed sycmcli", "read selected authorized market data", "private temporary files"],
+    "normalization": "Preserve platform ranges and missing values, expose collection completeness, and avoid invented exact search-volume or conversion values.",
+    "tested_date": "2026-10-14",
+    "evidence": ["A clean Codex context completed a real seven-day Top 50 keyword ranking in three pages with zero duplicates, preserved all platform ranges and null comparisons, produced three evidence-linked actions, and removed temporary data."]
+  }]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "marketing-price-check-pro",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "marketing.price-check.batch",
+      "purpose": "Compare a local price sheet with authorized online price fields and produce a recoverable row-level risk report.",
+      "required": true,
+      "required_features": [
+        "source-file-preservation",
+        "field-mapping-confirmation",
+        "stable-online-read",
+        "sku-alignment",
+        "price-basis-labeling",
+        "guarded-output",
+        "recoverable-backup",
+        "credential-nonexport"
+      ],
+      "input_fields": [
+        "store",
+        "priceSheet",
+        "sheetName",
+        "fieldMapping",
+        "checkDate",
+        "priceBasis",
+        "tolerance",
+        "outputDirectory"
+      ],
+      "output_fields": [
+        "runId",
+        "checkedAt",
+        "sourceFileDigest",
+        "counts",
+        "rows",
+        "risks",
+        "unmatched",
+        "dataGaps",
+        "artifacts"
+      ],
+      "side_effects": {
+        "external_mutation": true,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

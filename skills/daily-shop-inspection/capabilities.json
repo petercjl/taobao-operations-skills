@@ -1,0 +1,57 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "daily-shop-inspection",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "shop.daily.inspect",
+      "purpose": "Orchestrate a read-only daily shop inspection across shop KPIs, item portfolio, anomalies, and available competition signals.",
+      "required": true,
+      "required_features": [
+        "exact-skill-resolution",
+        "store-binding",
+        "complete-day-window",
+        "risk-deduplication",
+        "evidence-prioritization",
+        "bounded-drilldown",
+        "temporary-data-cleanup"
+      ],
+      "input_fields": [
+        "store",
+        "inspectionDate",
+        "coreItemLimit",
+        "competitors",
+        "riskFocus"
+      ],
+      "output_fields": [
+        "shopSignals",
+        "itemSignals",
+        "competitionSignals",
+        "risks",
+        "priorities",
+        "recommendedSkills",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

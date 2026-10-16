@@ -1,0 +1,10 @@
+{
+  "skillId": 158,
+  "skillCode": "category-price-band-analysis",
+  "skillName": "类目价格带分析",
+  "skillDescription": "分析指定叶子类目的平台价格带和各价格带头部商品样本，为选品、定价验证和竞品研究提供证据",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "package",
+  "installedAt": 1790738204418
+}

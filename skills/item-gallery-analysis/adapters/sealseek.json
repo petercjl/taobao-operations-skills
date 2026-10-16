@@ -1,0 +1,15 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "sealseek",
+  "mappings": [
+    {
+      "capability_id": "item.gallery-performance.analyze",
+      "status": "implemented",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.item.gallery.read"},
+      "features": ["dependency-resolution", "store-and-item-binding", "complete-pagination", "material-type-grouping", "sample-size-gate", "null-preservation", "non-additive-metric-warning", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store and item material data", "private temporary files"],
+      "normalization": "Use the same package-owned analyzer and sycmcli contract as Codex; live SealSeek validation remains pending."
+    }
+  ]
+}

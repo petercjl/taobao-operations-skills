@@ -1,0 +1,57 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "competitor-comparison-action-tracking",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "competitor.action-track.analyze",
+      "purpose": "Track competitor shop or item changes across aligned periods and separate observed actions, concurrent signals, and hypotheses.",
+      "required": true,
+      "required_features": [
+        "nested-skill-resolution",
+        "period-alignment",
+        "stable-identity",
+        "change-deduplication",
+        "causality-boundary",
+        "guarded-local-state",
+        "recoverable-backup"
+      ],
+      "input_fields": [
+        "store",
+        "competitors",
+        "baseline",
+        "observation",
+        "dimensions",
+        "projectDirectory"
+      ],
+      "output_fields": [
+        "changes",
+        "observedActions",
+        "hypotheses",
+        "followUps",
+        "evidence",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": true,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

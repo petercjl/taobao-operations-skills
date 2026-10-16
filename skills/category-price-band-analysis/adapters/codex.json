@@ -1,0 +1,12 @@
+{
+  "schema": "portable-skill-adapter", "schema_version": "1.0.0", "platform": "codex",
+  "mappings": [{
+    "capability_id": "market.category-price-bands.analyze", "status": "tested",
+    "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capabilities": ["sycm.category.read", "sycm.market.price_segments.read", "sycm.market.item_rank.read"]},
+    "features": ["dependency-resolution", "leaf-category-resolution", "platform-price-band-read", "price-filter-traceability", "per-band-sampling", "range-preservation", "null-preservation", "evidence-linked-actions"],
+    "permissions": ["execute installed sycmcli", "read selected authorized market data", "private temporary files"],
+    "normalization": "Require every ranking sample to carry the matching applied price-band filter, and preserve platform ranges without invented exact values.",
+    "tested_date": "2026-10-14",
+    "evidence": ["A clean Codex context read six real platform price bands and five GMV-ranked samples per band, verified every applied filter ID, preserved ranges and nulls, and removed temporary data."]
+  }]
+}

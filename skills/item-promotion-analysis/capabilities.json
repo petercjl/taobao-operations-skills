@@ -1,0 +1,58 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "item-promotion-analysis",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "item.promotion.analyze",
+      "purpose": "Analyze item paid-promotion coverage, traffic, spend, sales efficiency, and reconciliation with whole-item results.",
+      "required": true,
+      "required_features": [
+        "registered-operation-only",
+        "store-item-binding",
+        "period-alignment",
+        "spend-profit-gate",
+        "overview-reconciliation",
+        "range-preservation",
+        "read-only"
+      ],
+      "input_fields": [
+        "store",
+        "itemIds",
+        "dateRange",
+        "targetRoi",
+        "grossMargin",
+        "channels"
+      ],
+      "output_fields": [
+        "promotionStatus",
+        "channelMetrics",
+        "itemTotals",
+        "reconciliation",
+        "diagnosis",
+        "actions",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "weekly-or-monthly-store-performance-reports",
+  "target_platforms": ["codex", "sealseek"],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": ["sycm.shop.performance.read"]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "shop.period-performance.report",
+      "purpose": "Generate an evidence-linked weekly or monthly shop performance report from normalized first-party summary data.",
+      "required": true,
+      "required_features": ["dependency-resolution", "explicit-period", "null-preservation", "platform-comparisons", "deterministic-report", "evidence-linked-actions"],
+      "input_fields": ["store", "period", "focus", "format"],
+      "output_fields": ["store", "dateRange", "periodType", "metrics", "comparisons", "drivers", "risks", "actions", "dataGaps", "markdown"],
+      "side_effects": {"external_mutation": false, "may_cost_money": false, "authorization": "read-only-selected-store"}
+    }
+  ]
+}

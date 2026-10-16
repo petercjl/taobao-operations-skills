@@ -1,0 +1,59 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "sycm-item-competitor-analysis",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "competitor.item.compare",
+      "purpose": "Compare a shop item with a user-confirmed competitor across metrics, trends, traffic sources, paid sources, and search words.",
+      "required": true,
+      "required_features": [
+        "registered-operation-only",
+        "explicit-rival-confirmation",
+        "store-item-binding",
+        "period-alignment",
+        "metric-channel-alignment",
+        "range-preservation",
+        "evidence-linked-actions"
+      ],
+      "input_fields": [
+        "store",
+        "selfItemId",
+        "rivalItemId",
+        "dateType",
+        "dateRange",
+        "focus"
+      ],
+      "output_fields": [
+        "coreMetrics",
+        "trends",
+        "trafficSources",
+        "paidSources",
+        "searchWords",
+        "gaps",
+        "actions",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "portable-skill-adapter", "schema_version": "1.0.0", "platform": "sealseek",
+  "mappings": [{
+    "capability_id": "market.category-top-items.profile", "status": "implemented",
+    "implementation": {"kind": "nested-skill", "dependency": "category-best-selling-items-analysis", "capabilities": ["market.category-best-selling-items.analyze"]},
+    "features": ["nested-skill-resolution", "upstream-contract-validation", "sample-completeness-propagation", "platform-keyword-only", "recurring-shop-profile", "null-preservation", "evidence-linked-actions"],
+    "permissions": ["execute installed application Skill", "read its structured output", "private temporary files"],
+    "normalization": "Use the same package-owned analyzer and nested Skill contract as Codex; live SealSeek validation remains pending."
+  }]
+}

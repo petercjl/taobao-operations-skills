@@ -1,0 +1,15 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "sealseek",
+  "mappings": [
+    {
+      "capability_id": "shop.performance.analyze",
+      "status": "implemented",
+      "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capability": "sycm.shop.performance.read"},
+      "features": ["dependency-resolution", "store-selection", "identity-validation", "null-preserving-analysis", "evidence-linked-diagnosis"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store data"],
+      "normalization": "Use the same sycmcli managed-browser JSON contract and preserve the shared output fields. Live SealSeek validation remains pending."
+    }
+  ]
+}

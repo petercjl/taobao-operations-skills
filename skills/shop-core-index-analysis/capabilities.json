@@ -1,0 +1,26 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "shop-core-index-analysis",
+  "target_platforms": ["codex", "sealseek"],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": ["sycm.shop.performance.read"]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "shop.performance.analyze",
+      "purpose": "Interpret one bound shop's core sales, traffic, conversion, comparison, and optional trend data.",
+      "required": true,
+      "required_features": ["dependency-resolution", "store-selection", "identity-validation", "null-preserving-analysis", "evidence-linked-diagnosis"],
+      "input_fields": ["store", "dateType", "dateRange", "focus", "trendIndex", "categoryId"],
+      "output_fields": ["store", "identity", "dateRange", "coreMetrics", "comparisons", "trend", "diagnosis", "actions", "dataGaps"],
+      "side_effects": {"external_mutation": false, "may_cost_money": false, "authorization": "read-only-selected-store"}
+    }
+  ]
+}

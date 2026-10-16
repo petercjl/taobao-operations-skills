@@ -1,0 +1,66 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "item-traffic-fluctuation-analysis",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": [
+        "business.registered_data.read"
+      ]
+    },
+    {
+      "name": "taobao-operations-skills",
+      "package": "@petercjl/taobao-operations-skills",
+      "minimum_version": "0.2.0",
+      "resolution": "exact Skill name from installed suite manifest",
+      "required_capabilities": [
+        "nested-skill-resolution"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "item.traffic-fluctuation.analyze",
+      "purpose": "Locate item traffic fluctuations by date and root channel while separating scale, conversion, and sales signals.",
+      "required": true,
+      "required_features": [
+        "nested-skill-resolution",
+        "period-alignment",
+        "root-channel-only",
+        "small-sample-gate",
+        "mixed-signal-classification",
+        "comparison-semantics",
+        "null-preservation"
+      ],
+      "input_fields": [
+        "store",
+        "itemId",
+        "currentWindow",
+        "comparisonWindow",
+        "threshold"
+      ],
+      "output_fields": [
+        "overallChange",
+        "dailyAnomalies",
+        "channelChanges",
+        "drivers",
+        "mixedSignals",
+        "actions",
+        "dataGaps"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "read-only-selected-store"
+      }
+    }
+  ]
+}

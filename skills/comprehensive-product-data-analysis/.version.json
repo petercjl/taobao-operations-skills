@@ -1,0 +1,10 @@
+{
+  "skillId": 234,
+  "skillCode": "comprehensive-product-data-analysis",
+  "skillName": "单品诊断报告",
+  "skillDescription": "分析指定商品的经营情况，全方位诊断商品经营表现、优化流量结构、标题关键词、主图素材及用户反馈等，结合专家知识给出提升建议，帮助商家提升转化率与市场竞争力",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738210402
+}

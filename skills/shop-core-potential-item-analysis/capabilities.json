@@ -1,0 +1,26 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "shop-core-potential-item-analysis",
+  "target_platforms": ["codex", "sealseek"],
+  "dependencies": [
+    {
+      "name": "sycmcli",
+      "package": "@petercjl/sycmcli",
+      "minimum_version": "0.4.0",
+      "resolution": "advertised skill catalog or sycmcli skill source --json",
+      "required_capabilities": ["sycm.shop.items.read"]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "shop.item-portfolio.analyze",
+      "purpose": "Classify a complete shop item set into core, potential, traffic, and observe groups using reproducible within-shop thresholds.",
+      "required": true,
+      "required_features": ["dependency-resolution", "full-item-collection", "completeness-gate", "within-shop-quantiles", "deterministic-classification", "evidence-linked-actions"],
+      "input_fields": ["store", "dateType", "dateRange", "direction", "limit", "focus"],
+      "output_fields": ["store", "identity", "dateRange", "completeness", "thresholds", "groupCounts", "groups", "actions", "dataGaps"],
+      "side_effects": {"external_mutation": false, "may_cost_money": false, "authorization": "read-only-selected-store"}
+    }
+  ]
+}

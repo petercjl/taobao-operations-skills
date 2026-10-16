@@ -1,0 +1,10 @@
+{
+  "skillId": 238,
+  "skillCode": "competitor-comparison-action-tracking",
+  "skillName": "竞争动态追踪",
+  "skillDescription": "总结竞争格局、发现核心异动、发现流失异动、下探竞对运营操作",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738210445
+}

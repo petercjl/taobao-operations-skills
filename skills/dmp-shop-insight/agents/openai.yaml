@@ -1,0 +1,4 @@
+interface:
+  display_name: "达摩盘全店洞察"
+  short_description: "查询达摩盘全店货品、点击、转化、ROI 与同行基准"
+  default_prompt: "使用 $dmp-shop-insight 查询图片里的支付金额、IPV、点击量、转化率、ROI 和连带购买指标。"

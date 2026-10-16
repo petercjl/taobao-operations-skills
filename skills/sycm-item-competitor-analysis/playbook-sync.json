@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "domain": "sycm.taobao.com",
+  "runId": "2026-08-12T12-24-51",
+  "apiUrl": "https://api-anything.alibaba-inc.com",
+  "moduleIds": [
+    "sycm-ci-item-self-item-confirm",
+    "sycm-ci-item-rival-item-confirm",
+    "sycm-ci-item-core-trend",
+    "sycm-ci-item-flow-source",
+    "sycm-ci-item-search-words"
+  ],
+  "syncedAt": "2026-08-12T12:40:28.887063Z",
+  "result": {
+    "ok": true,
+    "validated": true,
+    "synced": true,
+    "created": [],
+    "updated": [
+      "sycm-ci-item"
+    ],
+    "deprecated": [],
+    "failed": [],
+    "warnings": []
+  }
+}

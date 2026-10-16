@@ -1,0 +1,10 @@
+{
+  "skillId": 1572,
+  "skillCode": "sycm-item-rank-helper",
+  "skillName": "个性化商品排行分析",
+  "skillDescription": "通过自定义指令使用生意参谋商品排行模块数据，定制个性化的商品排行分析",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738204870
+}

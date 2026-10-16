@@ -1,0 +1,4 @@
+interface:
+  display_name: "生意参谋商品竞品对比"
+  short_description: "查询本品/竞品核心指标、流量来源、支付转化率、搜索词等竞品对比数据"
+  default_prompt: "使用 sycm-item-competitor-analysis 查询商品 692941946548 和竞品 861895294478 的流量来源支付转化率。"

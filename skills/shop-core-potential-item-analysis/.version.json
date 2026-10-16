@@ -1,0 +1,10 @@
+{
+  "skillId": 337,
+  "skillCode": "shop-core-potential-item-analysis",
+  "skillName": "核心潜力商品分析",
+  "skillDescription": "从店铺现有商品中识别核心品，了解其在流量、转化、服务、流失等各方面的情况。并从店铺现有商品中（重点关注新品），科学地筛选出具备“爆款”或“引流款”潜力的商品。",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738208384
+}

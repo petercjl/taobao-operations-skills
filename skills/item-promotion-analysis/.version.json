@@ -1,0 +1,10 @@
+{
+  "skillId": 198,
+  "skillCode": "item-promotion-analysis",
+  "skillName": "商品付费推广分析",
+  "skillDescription": "分析商品的整体推广情况，推广渠道、是否开全站货品推等，进行推广诊断并给出策略建议。",
+  "skillVersion": "v3.0.0",
+  "dataSensitive": 0,
+  "source": "store",
+  "installedAt": 1790738207738
+}

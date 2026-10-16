@@ -1,0 +1,10 @@
+{
+  "schema": "portable-skill-adapter", "schema_version": "1.0.0", "platform": "sealseek",
+  "mappings": [{
+    "capability_id": "market.category-keywords.analyze", "status": "implemented",
+    "implementation": {"kind": "composed-skill", "dependency": "sycmcli", "capabilities": ["sycm.category.read", "sycm.market.keyword_rank.read"]},
+    "features": ["dependency-resolution", "leaf-category-resolution", "keyword-pagination", "top-n-completeness", "range-preservation", "null-preservation", "evidence-linked-actions"],
+    "permissions": ["execute installed sycmcli", "read selected authorized market data", "private temporary files"],
+    "normalization": "Use the same package-owned analyzer and sycmcli contracts as Codex; live SealSeek validation remains pending."
+  }]
+}

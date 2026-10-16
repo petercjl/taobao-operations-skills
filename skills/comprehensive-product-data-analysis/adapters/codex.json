@@ -1,0 +1,17 @@
+{
+  "schema": "portable-skill-adapter",
+  "schema_version": "1.0.0",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "item.comprehensive-diagnosis.analyze",
+      "status": "tested",
+      "implementation": {"kind": "composed-skill", "dependencies": ["sycmcli", "item-traffic-analysis"]},
+      "features": ["dependency-resolution", "store-and-item-binding", "same-period-validation", "null-preservation", "funnel-analysis", "traffic-analysis-composition", "evidence-linked-actions"],
+      "permissions": ["execute installed sycmcli", "read selected authorized store and item data", "execute bundled deterministic analyzers", "private temporary files"],
+      "normalization": "Keep platform values and comparisons separate, preserve nulls, aggregate only root traffic sources, reconcile the channel tree to item totals, and remove temporary business data after use.",
+      "tested_date": "2026-10-14",
+      "evidence": ["Codex clean-context regression used packaged sycmcli 0.4.0 to collect all 402 items, select the unique highest-sales-volume item, read four same-period item modules, compose the tested traffic analyzer, preserve nulls, suppress unreconciled overall contribution rates, and clean temporary data."]
+    }
+  ]
+}
