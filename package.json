@@ -1,6 +1,6 @@
 {
   "name": "@petercjl/taobao-operations-skills",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Independent Taobao operations application Skills distributed as one cross-Agent npm package",
   "type": "module",
   "bin": {
