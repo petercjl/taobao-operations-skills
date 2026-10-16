@@ -18,7 +18,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "check": "node --check scripts/taobao-operations-skills.mjs && node --check src/*.mjs",
+    "check": "node scripts/check-syntax.mjs",
     "test": "node --test",
     "prepack": "npm run check && npm test",
     "version": "node scripts/sync-package-version.mjs"
